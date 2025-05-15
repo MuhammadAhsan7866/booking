@@ -1,0 +1,170 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dateSection {
+  margin-bottom: 2rem;
+}
+
+.dateSection label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.dateSection input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.appointmentCounts {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.appointmentCounts p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.inputGroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.ratingSection {
+  margin-bottom: 2rem;
+}
+
+.ratingSection label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.emojis {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.emojis span:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+
+.videoSection {
+  margin-bottom: 2rem;
+}
+
+.videoSection h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.recordedVideo {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.videoControls {
+  display: flex;
+  gap: 1rem;
+}
+
+.recordButton,
+.stopButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.recordButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.recordButton:hover {
+  background-color: #45a049;
+}
+
+.recordButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.stopButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.stopButton:hover {
+  background-color: #da190b;
+}
+
+.stopButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #0051a2;
+} 
