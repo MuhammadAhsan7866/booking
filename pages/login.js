@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import axios from 'axios';
 import styles from '../styles/Login.module.css';
 
 export default function Login() {
@@ -11,24 +12,24 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
+      const response = await axios.post('http://localhost:5000/login', {
+        username,
+        password,
       });
-      
-      const data = await res.json();
-      
+
+      const data = response.data;
+
       if (data.success) {
         localStorage.setItem('token', data.token);
         router.push('/admin/dashboard');
       } else {
-        setError(data.message);
+        setError(data.message || 'Invalid credentials');
       }
     } catch (err) {
-      setError('An error occurred. Please try again.');
+      console.error('Login error:', err);
+      setError(
+        err.response?.data?.message || 'An error occurred. Please try again.'
+      );
     }
   };
 
@@ -65,4 +66,4 @@ export default function Login() {
       </div>
     </div>
   );
-} 
+}
